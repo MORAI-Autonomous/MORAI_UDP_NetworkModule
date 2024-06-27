@@ -9,8 +9,8 @@ class NPC_GHOST_MANAGER :
     def __init__(self):        
         self.udp_socket = udp_sender('127.0.0.1', 7604, 'npc_ghost')
         self.ghost_manager = util()
-        x = 0 
-        y = 0 
+        x = 13
+        y = 1100 
         z = 0
 
         while True:            

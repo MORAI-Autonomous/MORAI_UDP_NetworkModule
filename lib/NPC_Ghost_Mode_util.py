@@ -1,7 +1,7 @@
 import struct
 
 class util :
-    def __init__(self,ip,port,data_type):
+    def __init__(self):
 
         header = '#NpcGhostCmd$'.encode()
         data_length = struct.pack('i', 1000)
