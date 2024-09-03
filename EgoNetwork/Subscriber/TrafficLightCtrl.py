@@ -1,3 +1,8 @@
+
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
 from lib.network.UDP import Sender
 from lib.define.SetTrafficLightCtrl import SetTrafficLightCtrl
 
@@ -10,7 +15,7 @@ def main():
     set_traffic = Sender(IP, PORT)
 
     data = SetTrafficLightCtrl()    
-    data.trafficLightIndex = "C119BS010025".encode() 
+    data.trafficLightIndex = "C119BS010025".ljust(12).encode()
     data.trafficLightStatus = 1
     ''' Status Info 
     Red : 1

@@ -1,6 +1,9 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
 from lib.network.UDP import Sender
 from lib.define.SetIntersectionStatus import SetIntersectionStatus
-
 IP = '127.0.0.1' 
 PORT = 9132
 

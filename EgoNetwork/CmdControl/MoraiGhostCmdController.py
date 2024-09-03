@@ -1,5 +1,9 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
 from lib.network.UDP import Sender
-from lib.define.EgoGhostMode import EgoGhostMode
+from lib.define.EgoGhostCtrlCmd import EgoGhostCtrlCmd
 
 IP = '127.0.0.1' 
 PORT = 9095
@@ -15,7 +19,7 @@ Log 파일이나, 다른 실시간 데이터를 받아 위치/자세 값을 반�
 def main():
     ego_ghost = Sender(IP, PORT)
 
-    data = EgoGhostMode()    
+    data = EgoGhostCtrlCmd()    
 
     data.pose_x = 26.43
     data.pose_y = 1115.30

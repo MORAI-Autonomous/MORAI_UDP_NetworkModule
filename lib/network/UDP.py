@@ -24,7 +24,7 @@ class Receiver :
     def recv_udp_data(self):        
         while True :
             raw_data, _ = self.socket.recvfrom(self.data_size)            
-            ctypes.memmove(ctypes.addressof(self.data_type), raw_data, self.data_size)
+            ctypes.memmove(ctypes.addressof(self.data_type), raw_data, self.data_size)            
             try:#한번에 여러 데이터가 들어오는 protocol을 위해 별도의 parsing(CAM, GPS 등등..)
                 self.data_type.parsing()
             except Exception as e :

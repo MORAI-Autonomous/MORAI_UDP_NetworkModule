@@ -1,3 +1,7 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
 import time
 from lib.network.UDP import Receiver
 from lib.define.GetTrafficLightStatus import GetTrafficLightStatus

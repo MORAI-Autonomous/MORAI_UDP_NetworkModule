@@ -1,7 +1,7 @@
 from lib.define.type import *
 from lib.define.base import Base
 
-class EgoGhostMode(Base):
+class EgoGhostCtrlCmd(Base):
     _fields_ = [
         ("header", _char * 13),
         ("data_lenght", _int),

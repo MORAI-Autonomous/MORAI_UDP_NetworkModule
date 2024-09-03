@@ -1,3 +1,7 @@
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).resolve().parents[2]))
+
 import time
 from lib.network.UDP import Receiver
 from lib.define.ObjectInfo import ObjectInfo
@@ -11,7 +15,7 @@ def main():
     obj_info = Receiver(IP, PORT, ObjectInfo())
     while True :
         obj_data = obj_info.get_data()        
-        print(obj_data) 
+        # print(obj_data) 
         _print(obj_data) 
 
         time.sleep(0.1)
